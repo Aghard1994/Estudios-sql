@@ -1,0 +1,17 @@
+La instrucción INSERT INTO se usa para insertar nuevos registros en una tabla.
+
+
+Es posible escribir la instrucción INSERT INTO de dos maneras.
+La primera forma especifica los nombres de columna y los valores que se insertarán:
+
+
+
+Insert Into Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+Values ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+---------------------------------------------------------------------------------------
+Insert Into Customers (CustomerName, City, Country)
+Values('Cardinal', 'Stavanger', 'Norway');
+
+
+

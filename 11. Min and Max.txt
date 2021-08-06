@@ -1,0 +1,15 @@
+Las funciones SQL MIN () y MAX ()
+La función MIN () devuelve el valor más pequeño de la columna seleccionada.
+La función MAX () devuelve el valor más grande de la columna seleccionada.
+
+Select Min(price) As SmallestPrice
+From Products;
+
+-----------------------------------
+
+Ejemplo MAX ()
+La siguiente instrucción SQL encuentra el precio del producto más caro:
+
+Select Max(price) As LargestPrice
+From Products;
+

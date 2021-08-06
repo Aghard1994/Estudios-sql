@@ -1,0 +1,48 @@
+La cláusula WHERE se puede combinar con operadores AND, OR y NOT.
+
+Los operadores AND y OR se utilizan para filtrar registros en función de más de una condición:
+
+El operador AND muestra un registro si todas las condiciones separadas por AND son VERDADERAS.
+El operador OR muestra un registro si alguna de las condiciones separadas por OR es VERDADERA.
+El operador NOT muestra un registro si las condiciones NO SON VERDADERAS.
+
+
+EJEMPLO AND //selecciona la ciudad Berlin y también selecciona el país Alemania
+ 
+Select *
+From Customers
+Where Country = "Germany" And City = "Berlin";
+
+EJEMPLO OR //Selecciona la ciudad Berlin o la ciudad München
+
+Select *
+From Customers
+Where City = "Berlin" Or City = "München";
+
+--------------------------------------------------
+
+Select *
+From Customers
+Where Country = "Germany" Or Country = "Spain";
+
+EJEMPLO NOT //Selecciona a todos los países, pero no Alemania
+
+Select *
+From Customers
+Where Not Country = "Germany";
+
+EJEMPLO DE COMBINAR EL AND, OR y NOT
+
+Select *
+From Customers
+Where Country = "Germany" And (City = "Berlin" Or City = "München");
+
+------------------------------------------------
+
+Select *
+From Customers
+Where Not Country = "Germany" And Not Country = "Usa";
+
+
+
+

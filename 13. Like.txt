@@ -1,0 +1,65 @@
+El operador LIKE se usa en una cláusula WHERE para buscar un patrón específico en una columna.
+
+Hay dos comodines que se utilizan a menudo junto con el operador LIKE:
+
+%: El signo de porcentaje representa cero, uno o varios caracteres
+_ - El guión bajo representa un solo carácter
+
+
+Nota: MS Access usa un asterisco (*) en lugar del signo de porcentaje (%) y un signo de interrogación (?) En lugar del guión bajo (_).
+
+¡El signo de porcentaje y el subrayado también se pueden usar en combinaciones!
+
+Sugerencia: también puede combinar cualquier número de condiciones mediante los operadores Y u O.
+
+
+Ejemplos de SQL LIKE
+La siguiente declaración SQL selecciona todos los clientes con un CustomerName que comienza con "a":
+
+Select *
+From Customers
+WHERE CustomerName Like 'a%';
+
+----------------------------------------------------------------------------
+
+La siguiente instrucción SQL selecciona todos los clientes con un CustomerName que termina con "a":
+
+Select *
+From Customers
+Where CustomerName Like '%a';
+---------------------------------------------------------------
+
+La siguiente declaración SQL selecciona todos los clientes con un CustomerName que tienen "o" en cualquier posición:
+
+Select *
+From Customers
+Where CustomerName Like '%or%';
+-----------------------------------------------
+
+La siguiente instrucción SQL selecciona todos los clientes con un CustomerName que tienen "r" en la segunda posición:
+
+Select *
+From Customers
+Where CustomerName like '_r%';
+
+-----------------------------------------------
+
+La siguiente declaración SQL selecciona todos los clientes con un CustomerName que comienza con "a" y tiene al menos 3 caracteres de longitud:
+
+Select *
+From Customers
+Where CustomerName like 'a__%';
+
+-------------------------------------------
+
+La siguiente instrucción SQL selecciona a todos los clientes con un ContactName que comienza con "a" y termina con "o":
+
+Select *
+From Customers
+Where CustomerName like 'a%o';
+---------------------------------------
+La siguiente instrucción SQL selecciona a todos los clientes con un CustomerName que NO comienza con "a":
+
+Select *
+From Customers
+Where CustomerName Not Like 'a%';

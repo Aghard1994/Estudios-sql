@@ -1,0 +1,28 @@
+Las funciones SQL COUNT (), AVG () y SUM ()
+La función COUNT () devuelve el número de filas que coincide con un criterio específico.
+
+La función AVG () devuelve el valor promedio de una columna numérica.
+
+La función SUM () devuelve la suma total de una columna numérica.
+
+COUNT () Ejemplo
+La siguiente instrucción SQL encuentra el número de productos:
+
+Select Count(ProductID)
+From Products;
+---------------------------------------------------------------
+
+
+Ejemplo de AVG ()
+La siguiente instrucción SQL encuentra el precio promedio de todos los productos:
+
+Select AVG(price)
+From Products;
+
+----------------------------------------------------------------
+
+Ejemplo de SUM ()
+La siguiente instrucción SQL busca la suma de los campos "Cantidad" en la tabla "Detalles del pedido":
+
+Select Sum(Quantity)
+From OrderDetails;

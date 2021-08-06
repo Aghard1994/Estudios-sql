@@ -1,0 +1,29 @@
+La palabra clave ORDER BY se usa para ordenar el conjunto de resultados en orden ascendente o descendente.
+
+La palabra clave ORDER BY ordena los registros en orden ascendente de forma predeterminada. Para ordenar los registros en orden descendente, use la palabra clave DESC.
+
+
+
+//Ordenado por país
+
+Select *
+From Customers
+Order By Country;
+
+EJEMPLO ORDEN POR DESC
+
+Select *
+From Customers
+Order By Country Desc;
+
+------------------------------
+
+Select *
+From Customers
+Order By Country, CustomerName;
+
+---------------------------------------------------
+
+Select *
+From Customers
+Order By CustomerName Desc, Country Asc;

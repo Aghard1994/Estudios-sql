@@ -1,0 +1,21 @@
+La instrucción DELETE se usa para eliminar registros existentes en una tabla.
+
+Nota: ¡Tenga cuidado al eliminar registros en una tabla! Observe la cláusula WHERE en la instrucción DELETE. 
+La cláusula WHERE especifica qué registro (s) deben eliminarse. 
+Si omite la cláusula WHERE, ¡se eliminarán todos los registros de la tabla!
+
+
+Delete From Customers
+Where CustomerName = 'Alfreds Futterkiste';
+
+----------------------------------------------------------
+
+La siguiente instrucción SQL elimina el cliente "Alfreds Futterkiste" de la tabla "Clientes":
+La siguiente instrucción SQL elimina todas las filas de la tabla "Clientes", sin eliminar la tabla:
+
+Delete From Customers;
+
+
+
+
+

@@ -1,0 +1,41 @@
+¿Qué es un valor NULL?
+Un campo con un valor NULL es un campo sin valor.
+
+Si un campo en una tabla es opcional, es posible insertar un nuevo registro o actualizar un registro sin agregar un valor a este campo. 
+Luego, el campo se guardará con un valor NULL.
+
+How to Test for NULL Values?
+It is not possible to test for NULL values with comparison operators, such as =, <, or <>.
+
+We will have to use the IS NULL and IS NOT NULL operators instead.
+
+El operador IS NULL se utiliza para probar valores vacíos (valores NULL).
+
+El siguiente SQL enumera todos los clientes con un valor NULL en el campo "Dirección":
+
+
+Consejo: Utilice siempre IS NULL para buscar valores NULL.
+
+------------------------------------------------------------
+Select CustomerName, ContactName, Address
+From Customers
+Where Address Is Null;
+
+-----------------------------------------------------------------
+El operador IS NOT NULL se usa para probar valores no vacíos (valores NOT NULL).
+
+El siguiente SQL enumera todos los clientes con un valor en el campo "Dirección":
+
+
+
+Select CustomerName, ContactName, Address
+From Customers
+Where Address Is Not Null;
+
+
+
+
+
+
+
+

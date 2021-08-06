@@ -1,0 +1,28 @@
+La instrucción UPDATE se usa para modificar los registros existentes en una tabla.
+
+Nota: ¡Tenga cuidado al actualizar registros en una tabla! Observe la cláusula WHERE en la instrucción UPDATE. 
+La cláusula WHERE especifica qué registro (s) debe actualizarse. 
+Si omite la cláusula WHERE, se actualizarán todos los registros de la tabla.
+
+La siguiente instrucción SQL actualiza el primer cliente (CustomerID = 1) con una nueva persona de contacto y una nueva ciudad.
+
+
+Update Customers
+Set ContactName = 'Alfred Schmidt', City = 'Frankfurt'
+Where CustomerID = 1;
+
+
+
+ACTUALIZAR registros múltiples
+Es la cláusula WHERE la que determina cuántos registros se actualizarán.
+
+La siguiente instrucción SQL actualizará el nombre de contacto a "Juan" para todos los registros donde el país es "México":
+
+Update Customers
+Set ContactName = 'Juan'
+Where Country = 'Mexico';
+
+
+¡Advertencia de actualización!
+Tenga cuidado al actualizar registros. Si omite la cláusula WHERE, ¡TODOS los registros se actualizarán!
+

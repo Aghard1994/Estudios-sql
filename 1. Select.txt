@@ -1,0 +1,14 @@
+La instrucción SELECT se usa para seleccionar datos de una base de datos.
+
+Los datos devueltos se almacenan en una tabla de resultados, llamada conjunto de resultados.
+
+
+
+
+SELECT CustomerName, City 
+FROM Customers;
+
+---------------------------------------------------
+
+SELECT * 
+FROM Customers;

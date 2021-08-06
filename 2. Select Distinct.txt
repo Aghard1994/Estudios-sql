@@ -1,0 +1,6 @@
+La instrucción SELECT DISTINCT se usa para devolver solo valores distintos (diferentes).
+
+Dentro de una tabla, una columna a menudo contiene muchos valores duplicados; y, a veces, solo desea enumerar los diferentes valores (distintos).
+
+SELECT Country 
+FROM Customers;

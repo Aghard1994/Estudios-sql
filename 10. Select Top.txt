@@ -1,0 +1,48 @@
+La cláusula SQL SELECT TOP
+La cláusula SELECT TOP se usa para especificar el número de registros a devolver.
+La cláusula SELECT TOP es útil en tablas grandes con miles de registros. Devolver una gran cantidad de registros puede afectar el rendimiento.
+
+Nota: No todos los sistemas de bases de datos admiten la cláusula SELECT TOP. 
+MySQL admite la cláusula LIMIT para seleccionar un número limitado de registros, mientras que Oracle usa ROWNUM.
+
+
+La siguiente instrucción SQL selecciona los primeros tres registros de la tabla "Clientes" (para SQL Server / MS Access):
+
+Select top 3 *
+From Customers;
+
+-----------------------------------
+
+La siguiente instrucción SQL muestra el ejemplo equivalente usando la cláusula LIMIT (para MySQL):
+
+SELECT * FROM Customers LIMIT 3;
+
+-----------------------------------------------------------------------------------
+
+La siguiente instrucción SQL muestra el ejemplo equivalente usando ROWNUM (para Oracle):
+
+Select *
+From Customers
+Where rownum <= 3;
+
+------------------------------------------------------------------------------------------
+
+La siguiente instrucción SQL selecciona el primer 50% de los registros de la tabla "Clientes" (para SQL Server / MS Access):
+
+
+Select top 50 percent *
+From Customers;
+
+-------------------------------------------------------------------------------
+
+
+AGREGAR UNA CLÁUSULA DONDE
+La siguiente instrucción SQL selecciona los primeros tres registros de la tabla "Clientes", donde el país es "Alemania" (para SQL Server / MS Access):
+
+Select top 3 *
+From Customers
+Where Country = 'Germany';
+
+---------------------------------------
+
+
